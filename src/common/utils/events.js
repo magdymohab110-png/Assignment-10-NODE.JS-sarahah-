@@ -1,0 +1,11 @@
+import { EventEmitter } from "node:events";
+
+export const eventEmitter = new EventEmitter();
+
+eventEmitter.on("confirm_email" , async(fn)=>{
+    fn();
+})
+
+eventEmitter.on("forget_password" , async(fn)=>{
+    fn();
+})

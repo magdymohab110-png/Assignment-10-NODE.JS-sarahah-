@@ -3,6 +3,7 @@ import { port } from "./config/config.js";
 import connectDB  from "./DB/connectionDB.js";
 import userRouter from "./module/user/user.controller.js";
 import cors from "cors"
+import { connectRedis } from "./DB/redis.connection.js";
 const app = express();
 
 const bootstrap = async()=>{
@@ -17,6 +18,7 @@ const bootstrap = async()=>{
 })
 
 await connectDB();
+await connectRedis();
 
 app.use("/users" , userRouter);
 

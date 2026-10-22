@@ -52,12 +52,10 @@ role : {
 
 phone : String,
 
-isConfirmed: {
-    type : Boolean ,
-    default : false
-},
+isConfirmed: Boolean,
 coverOfImages : [String],
-profileImage : String
+profileImage : String,
+changeCredentialAt : Date
 
 
 },{
